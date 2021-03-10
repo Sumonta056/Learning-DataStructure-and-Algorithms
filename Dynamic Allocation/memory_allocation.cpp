@@ -31,34 +31,34 @@ const int N = int(1e5 + 3);
 int main()
 { 
     fast;
+    //static vs dynamic memory allocation
+    //creating heap memory
 
-int a[10] ;
+    int *p = new int ;   //new int refers to new address while compling
+    *p = 4 ;
+    cout<<*p<<endl;
 
-// array address
-cout << a << endl;
-cout << &a[0] << endl;
 
-// in pointer u can treat a as a[0]
-a[0] = 5 ;
-cout<< *a <<endl;
+    /* int n ;
+        cin >> n ;
 
-//accessing the other elements of array ;
-a[1] = 6;
+        int arr[n] ;
 
-int *p = a + 1 ;  //access 1st element p = a[1]
-cout<<*p <<endl;
-// p[0] =  a + 0 ; 
+        this is not good  cz we don't know the size of array compailing in stack memory 
+    */
 
-cout<<&p<<endl;
-cout<<&a[1]<<endl;
+    // for this we can use heap memory
+    int n ; 
+    cin >> n ;
 
-//here p and a[1] are not same address cz while creating *p pointer it creates a new address 
+    int *p = new int[n] ;
 
-// accessing i element of array
-// int *p = a + i   or p = a[i]
+    p[0] = 10 ; // p[0] =  p + 0 ; 
 
 
 
 
+    
 
+ 
 }

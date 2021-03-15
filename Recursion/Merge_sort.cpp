@@ -34,6 +34,9 @@ void merge( int arr[], int l ,int m  , int r)
 
     int new_index = l ;
     int new_arr[100] ;
+    
+    //* now we will compare the values of two array
+    //* and put the lowest value in a new array and move forward  based on rules
 
     while( left_index<=m && right_index<=r)
     {
@@ -55,7 +58,7 @@ void merge( int arr[], int l ,int m  , int r)
         }
     }
 
-
+    // * after comparing two array we will put all the unchanged value of 1st array in new array
     while ( left_index<=m )
     {
          new_arr[new_index] = arr[left_index];
@@ -64,7 +67,8 @@ void merge( int arr[], int l ,int m  , int r)
             left_index++;
     }
 
-      while ( right_index<=r )
+    // * after comparing two array we will put all the unchanged value of 2nd array in new array
+    while ( right_index<=r )
     {
          new_arr[new_index] = arr[right_index];
 
@@ -72,6 +76,7 @@ void merge( int arr[], int l ,int m  , int r)
             right_index++;
     }
 
+    //* copying all the value of new array in our old array
     for( int i = l ; i<=r ; i++)
     {
         arr[i] = new_arr[i];
@@ -79,6 +84,8 @@ void merge( int arr[], int l ,int m  , int r)
 
 }
 
+// ! in this function will divide our array in two part ( recursively)
+// * for this mergeshort follow divide and conquer method
 
 void merge_sort( int arr[] , int left , int right)
 {
@@ -86,9 +93,14 @@ void merge_sort( int arr[] , int left , int right)
     {
         int mid = ( left + right) / 2 ;
 
+        // * first part of array
         merge_sort( arr , left , mid);
+
+        //* 2nd part of  array
         merge_sort( arr , mid+1 , right);
 
+        //* we will 1st rearrange the two parts according to the order
+        //* then we will merge two array by rearranging it
         merge( arr , left , mid ,right);
     }
 }
@@ -106,6 +118,7 @@ int main()
        cin>>arr[i] ;
    }
 
+   // function for merge sort algortihm
    merge_sort ( arr , 0 , size - 1) ;
 
    for( int i = 0; i<size ; i++)

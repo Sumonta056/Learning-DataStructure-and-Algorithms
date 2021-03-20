@@ -4,6 +4,8 @@
         "xiosbase": "cpp",
         "vector": "cpp",
         "utility": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "xstring": "cpp",
+        "cstddef": "cpp"
     }
 }

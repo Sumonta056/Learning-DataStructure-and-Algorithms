@@ -6,6 +6,7 @@
         "utility": "cpp",
         "map": "cpp",
         "xstring": "cpp",
-        "cstddef": "cpp"
+        "cstddef": "cpp",
+        "limits": "cpp"
     }
 }

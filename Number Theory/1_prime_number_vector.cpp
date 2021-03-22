@@ -78,14 +78,14 @@ int main()
       //* our next job is to false those which are multiple of its
       if(arr[i] == true)
       {
-          //* for avoiding tle we will start from 
-          //*  5 x 5
-          //* 5 x 6
-          //* we will not start from  5  x 2
-          //*  it was already taken while 2  
-          for(int j = i ; j <= n ; j++)
+         //* for avoiding tle we will start from 
+          //*  suppose our i = 2 and we want to false all its multiple
+          //*  so we will start  j = i * i = 4
+          //*  and it mutiple are 6 8 10 12
+          //*  so increase j value as i  :  j = j+i = 6 , 8 , 10
+          for(int j = i * i ; j <= n ; j = j + i)
           {
-              arr[i*j]=false;
+              arr[j]=false;
           }
       }
     }

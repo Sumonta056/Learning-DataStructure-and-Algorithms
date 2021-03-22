@@ -54,13 +54,14 @@ int main()
     fast;
 
     // *sieve of eratosthenes
+    // ? TLE : 0(nloglog(n))
 
     //* print all the prime from 1 to n
 
     int n;
     cin >> n ;
 
-
+    // ! increase array size while creating bool
     bool arr[n+1] ;
     memset(arr, true, sizeof(arr));
 
@@ -80,13 +81,13 @@ int main()
       if(arr[i] == true)
       {
           //* for avoiding tle we will start from 
-          //*  5 x 5
-          //* 5 x 6
-          //* we will not start from  5  x 2
-          //*  it was already taken while 2  
-          for(int j = i ; j <= n ; j++)
+          //*  suppose our i = 2 and we want to false all its multiple
+          //*  so we will start  j = i * i = 4
+          //*  and it mutiple are 6 8 10 12
+          //*  so increase j value as i  :  j = j+i = 6 , 8 , 10
+          for(int j = i * i ; j <= n ; j = j + i)
           {
-              arr[i*j]=false;
+              arr[j]=false;
           }
       }
     }

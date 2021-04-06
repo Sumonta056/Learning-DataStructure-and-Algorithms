@@ -9,6 +9,8 @@
         "cstddef": "cpp",
         "limits": "cpp",
         "ios": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "ostream": "cpp",
+        "iomanip": "cpp"
     }
 }

@@ -41,7 +41,7 @@ int main()
 
 int  n ; // nth number fiboncai number
 
-n = 6 ;
+n = 3 ;
 
 cout  << fibo(n) ;
     

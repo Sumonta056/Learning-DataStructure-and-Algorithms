@@ -47,64 +47,51 @@ using namespace std;
 #define NINF numeric_limits<ll>::min();
 const int N = int(1e5 + 3);
 
-void output(int arr[], int n)
+class student
 {
-    for (int i = 0; i < n; i++)
-    {
-        cout << arr[i] << " ";
-    }
+public:
+    int roll;
+    string name;
+
+private:
+    int age;
+
+public:
+    void print();
+    void setage(int a , int pass);
+};
+
+void student::print()
+{
+    cout << name << " " << age << " " << roll;
+}
+
+void student::setage( int a , int pass)
+{
+    if( pass == 123) age = a ;
+    else return;
+    
 }
 
 int main()
 {
     fast;
 
-    int n;
-    cin >> n;
+    student s1;
 
-    int arr[n];
+    s1.roll = 1;
+    s1.name = "Mridul";
 
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
+    // * s1.age  =  21 ; it will not take age
+    // ? as it is private
+    // ! but we can access it in different way
 
-    // * bubble sort 
-    // * compare two nearest element from left to right
-    // * then swap numbers
-    // * after 1st loop we will found the highest value of array at last
-    // * at end our array will be sorted
+    int age , password ;
+    cin>>age >> password ;
+    s1.setage(age , password);
 
-    for (int i = 0; i < n-1; i++)
-    {
-        for (int j = i + 1; j < n-1-i; j++) // * Last i elements are already in place
-        {
-            // * swap element if 1st > 2nd
-            if (arr[i] > arr[j])
-                swap(arr[i], arr[j]);
-        }
-    
-        cout<< endl;
-    }
 
-    /*
-    * how it works 
-    * array  14 33 27 35 10
-    ! step 1
-    *  14 33 27 35 10
-    * 14 27 33 35 10
-    * 14 27 33 10 35
-    ! step 2
-    * 14 27 10 33 35
-    ! step 3
-    * 14 10 27 33 35
-    ! step 2
-    * 10 14 27 33 35
-    
-    */
 
-    for (int i = 0; i < n; i++)
-    {
-        cout << arr[i] << " ";
-    }
+    // * calling class function
+    s1.print();
 }

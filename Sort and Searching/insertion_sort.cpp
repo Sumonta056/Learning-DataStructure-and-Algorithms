@@ -1,4 +1,4 @@
-//        ** Sumonta Saha Mridul **                                    SWE - SUST
+ //        ** Sumonta Saha Mridul **                                    SWE - SUST
 /*     
 
          ######    ##     ##  ##     ##   #######   ##    ##   ########      ###
@@ -62,8 +62,8 @@ int main()
 
     // * insertion sort
     // * Iterate from arr[1] to arr[n] over the array
-    // * Compare the current element (key) to its predecessor
-    // * If the key element is smaller than its predecessor, compare it to the elements before
+    // * Compare the current element (key) to its previous
+    // * If the key element is smaller than its previous, compare it to the elements before
     // * Move the greater elements one position up to make space for the swapped element
 
     // ! start form 2nd element
